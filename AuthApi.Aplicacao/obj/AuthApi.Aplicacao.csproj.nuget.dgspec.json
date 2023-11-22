@@ -1,0 +1,226 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Aplicacao\\AuthApi.Aplicacao.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Aplicacao\\AuthApi.Aplicacao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Aplicacao\\AuthApi.Aplicacao.csproj",
+        "projectName": "AuthApi.Aplicacao",
+        "projectPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Aplicacao\\AuthApi.Aplicacao.csproj",
+        "packagesPath": "C:\\Users\\marcu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Aplicacao\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj": {
+                "projectPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj"
+              },
+              "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Repositorio\\AuthApi.Repositorio.csproj": {
+                "projectPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Repositorio\\AuthApi.Repositorio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "SecureIdentity": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj",
+        "projectName": "AuthApi.Dominio",
+        "projectPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj",
+        "packagesPath": "C:\\Users\\marcu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Repositorio\\AuthApi.Repositorio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Repositorio\\AuthApi.Repositorio.csproj",
+        "projectName": "AuthApi.Repositorio",
+        "projectPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Repositorio\\AuthApi.Repositorio.csproj",
+        "packagesPath": "C:\\Users\\marcu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Repositorio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj": {
+                "projectPath": "C:\\Users\\marcu\\source\\repos\\AuthApi\\AuthApi.Dominio\\AuthApi.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.21, )"
+            },
+            "Dapper.SqlBuilder": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

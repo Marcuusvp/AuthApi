@@ -1,0 +1,15 @@
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\bin\Debug\net7.0\AuthApi.Repositorio.deps.json
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\bin\Debug\net7.0\AuthApi.Repositorio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\bin\Debug\net7.0\AuthApi.Repositorio.pdb
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\bin\Debug\net7.0\AuthApi.Dominio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\bin\Debug\net7.0\AuthApi.Dominio.pdb
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.csproj.AssemblyReference.cache
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.AssemblyInfoInputs.cache
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.AssemblyInfo.cs
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.csproj.CopyComplete
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\refint\AuthApi.Repositorio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\AuthApi.Repositorio.pdb
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Repositorio\obj\Debug\net7.0\ref\AuthApi.Repositorio.dll

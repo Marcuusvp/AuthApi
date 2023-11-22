@@ -1,0 +1,12 @@
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\bin\Debug\net7.0\AuthApi.Dominio.deps.json
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\bin\Debug\net7.0\AuthApi.Dominio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\bin\Debug\net7.0\AuthApi.Dominio.pdb
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.csproj.AssemblyReference.cache
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.AssemblyInfoInputs.cache
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.AssemblyInfo.cs
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\refint\AuthApi.Dominio.dll
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\AuthApi.Dominio.pdb
+C:\Users\marcu\source\repos\AuthApi\AuthApi.Dominio\obj\Debug\net7.0\ref\AuthApi.Dominio.dll
