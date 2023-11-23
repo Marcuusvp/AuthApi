@@ -29,5 +29,13 @@ namespace AuthApi.Api.Controllers
             var resultado = await _authService.CreateUser(usuario);
             return GerarRetorno(resultado);
         }
+
+        [AllowAnonymous]
+        [HttpPost("/login")]
+        public async Task<IActionResult> Login([FromBody]UsuarioDto usuario)
+        {
+            var resultado = await _authService.UserLogin(usuario);
+            return GerarRetorno(resultado);
+        }
     }
 }

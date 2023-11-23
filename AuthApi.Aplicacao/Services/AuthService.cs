@@ -42,5 +42,37 @@ namespace AuthApi.Aplicacao.Services
             }
             return resultado;
         }
+
+        public async Task<LoginDto> UserLogin(UsuarioDto usuario)
+        {
+            var user = _mapper.Map<User>(usuario);
+            var usuarioSolicitado = await _authRepository.GetUser(user);
+            if(usuarioSolicitado == null)
+            {
+                _mensagem.AdicionaErro("Usuário Inválido");
+                return null;
+            }
+            var permissoes = await _authRepository.GetRoles(usuarioSolicitado);
+            usuarioSolicitado.Permissions = permissoes;
+            if(PasswordHasher.Verify(usuarioSolicitado.PasswordHash, usuario.Password))
+            {
+                try
+                {
+                    var token = _tokenService.TokenGenerator(usuarioSolicitado);
+                    var resultado = new LoginDto { Username = usuarioSolicitado.UserName, Permissoes = usuarioSolicitado.Permissions, Token = token};
+                    return resultado;
+                }
+                catch
+                {
+                    _mensagem.AdicionaErro("Impossível gerar token");
+                    return null;
+                }
+            }
+            else
+            {
+                _mensagem.AdicionaErro("Senha inválida");
+                return null;
+            }
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace AuthApi.Aplicacao.Interface
     public interface IAuthService
     {
         Task<bool> CreateUser (NovoUsuarioDto usuario);
+        Task<LoginDto> UserLogin(UsuarioDto usuario);
     }
 }

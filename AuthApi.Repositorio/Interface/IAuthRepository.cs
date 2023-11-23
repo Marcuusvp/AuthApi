@@ -9,5 +9,7 @@ namespace AuthApi.Repositorio.Interface
     public interface IAuthRepository
     {
         Task<bool> AddNewUser(User usuario);
+        Task<User> GetUser(User usuario);
+        Task<IEnumerable<Permission>> GetRoles(User user);
     }
 }
