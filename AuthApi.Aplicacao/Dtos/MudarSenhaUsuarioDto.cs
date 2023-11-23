@@ -19,7 +19,7 @@ namespace AuthApi.Aplicacao.Dtos
         public string NewPassword { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Senha e confirmação não são as mesmas.")]
+        [Compare("NewPassword", ErrorMessage = "Senha e confirmação não são as mesmas.")]
         public string ReNewPassword { get; set; }
     }
 }
