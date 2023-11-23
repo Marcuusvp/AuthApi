@@ -37,5 +37,20 @@ namespace AuthApi.Api.Controllers
             var resultado = await _authService.UserLogin(usuario);
             return GerarRetorno(resultado);
         }
+
+        [AllowAnonymous]
+        [HttpPost("/esqueceu-senha")]
+        public async Task<IActionResult> AlterarSenha([FromBody]AlteraSenhaUsuarioDto usuario)
+        {
+            var resultado = await _authService.AlterarSenha(usuario);
+            return GerarRetorno(resultado);
+        }
+        [AllowAnonymous]
+        [HttpPost("/alterar-senha")]
+        public async Task<IActionResult> MudarSenha([FromBody]MudarSenhaUsuarioDto usuario)
+        {
+            var resultado = await _authService.MudarSenha(usuario);
+            return GerarRetorno(resultado);
+        }
     }
 }
