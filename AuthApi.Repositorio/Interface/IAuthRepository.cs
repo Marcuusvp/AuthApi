@@ -11,5 +11,6 @@ namespace AuthApi.Repositorio.Interface
         Task<bool> AddNewUser(User usuario);
         Task<User> GetUser(User usuario);
         Task<IEnumerable<Permission>> GetRoles(User user);
+        Task<bool> SetNewPassword(string novaSenha, string email);
     }
 }

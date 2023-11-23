@@ -14,6 +14,8 @@ namespace AuthApi.Aplicacao.Profiles
         {
             CreateMap<NovoUsuarioDto, User>();
             CreateMap<UsuarioDto, User>().ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password));
+            CreateMap<AlteraSenhaUsuarioDto, User>();
+            CreateMap<MudarSenhaUsuarioDto, User>();
         }
         
     }

@@ -74,5 +74,51 @@ namespace AuthApi.Aplicacao.Services
                 return null;
             }
         }
+
+        public async Task<bool> AlterarSenha(AlteraSenhaUsuarioDto usuario)
+        {
+            var user = _mapper.Map<User>(usuario);
+            var usuarioSolicitado = await _authRepository.GetUser(user);
+            if (usuarioSolicitado == null)
+            {
+                _mensagem.AdicionaErro("Usuário inválido");
+                return false;
+            }
+            var newPassword = PasswordGenerator.Generate(25);
+            var newHash = PasswordHasher.Hash(newPassword);
+            await _authRepository.SetNewPassword(newHash, user.Email);
+            _emailService.Send(
+                    user.UserName,
+                    user.Email,
+                    "ALTERAÇÃO DE SENHA",
+                    $"Sua nova senha é <strong>{newPassword}</strong>");
+            return true;
+        }
+
+        public async Task<bool> MudarSenha(MudarSenhaUsuarioDto usuario)
+        {
+            var user = _mapper.Map<User>(usuario);
+            var usuarioSolicitado = await _authRepository.GetUser(user);
+            if (usuarioSolicitado == null)
+            {
+                _mensagem.AdicionaErro("Usuário inválido");
+                return false;
+            }
+            if (PasswordHasher.Verify(usuarioSolicitado.PasswordHash, usuario.Password))
+            {
+                var newHash = PasswordHasher.Hash(usuario.NewPassword);
+                var novaSenha = await _authRepository.SetNewPassword(newHash, usuario.Email);
+                _emailService.Send(
+                    user.UserName,
+                    user.Email,
+                    "Você definiu sua senha para",
+                    $"Sua nova senha é <strong>{usuario.NewPassword}</strong>");
+                return novaSenha;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

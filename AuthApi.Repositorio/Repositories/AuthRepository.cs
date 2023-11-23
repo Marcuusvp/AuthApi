@@ -50,5 +50,19 @@ namespace AuthApi.Repositorio.Repositories
                             WHERE u.email = @EMAIL";
             return await sql.QueryAsync<Permission>(query, param);
         }
+
+        public async Task<bool> SetNewPassword(string novaSenha, string email)
+        {
+            using IDbConnection sql = _conexao.Conectar;
+            var param = new DynamicParameters();
+            param.Add("@NOVASENHA", novaSenha, DbType.String);
+            param.Add("@EMAIL", email, DbType.String);
+            var query = @"UPDATE USUARIOS
+                            SET PASSWORDHASH = @NOVASENHA
+                            WHERE EMAIL = @EMAIL";
+            var resultado = await sql.ExecuteAsync(query, param);
+            return resultado > 0 ? true : false;
+
+        }
     }
 }
