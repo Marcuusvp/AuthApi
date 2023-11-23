@@ -40,6 +40,11 @@ namespace AuthApi.Aplicacao.Services
                     "Bem vindo a minha API", 
                     $"Sua senha é <strong>{usuario.Password}</strong>");
             }
+            else 
+            {
+                _mensagem.AdicionaErro("Email já cadastrado");
+                return false;
+            }
             return resultado;
         }
 

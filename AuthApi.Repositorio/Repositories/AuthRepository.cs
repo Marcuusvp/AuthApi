@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 using AuthApi.Dominio.Model;
@@ -18,14 +19,25 @@ namespace AuthApi.Repositorio.Repositories
         }
 
         public async Task<bool> AddNewUser(User usuario){
-            using IDbConnection sql = _conexao.Conectar;
-            var param = new DynamicParameters();
-            param.Add("@USERNAME", usuario.UserName, DbType.String);
-            param.Add("@EMAIL", usuario.Email, DbType.String);
-            param.Add("@PASSWORDHASH", usuario.PasswordHash, DbType.String);
-            var query = @"INSERT INTO USUARIOS (USERNAME, EMAIL, PASSWORDHASH) VALUES (@USERNAME, @EMAIL, @PASSWORDHASH)";
-            var resultado = await sql.ExecuteAsync(query, param);
-            return resultado > 0;
+            try
+            {
+                using IDbConnection sql = _conexao.Conectar;
+                var param = new DynamicParameters();
+                param.Add("@USERNAME", usuario.UserName, DbType.String);
+                param.Add("@EMAIL", usuario.Email, DbType.String);
+                param.Add("@PASSWORDHASH", usuario.PasswordHash, DbType.String);
+                var query = @"INSERT INTO USUARIOS (USERNAME, EMAIL, PASSWORDHASH) VALUES (@USERNAME, @EMAIL, @PASSWORDHASH)";
+                var resultado = await sql.ExecuteAsync(query, param);
+                return resultado > 0;
+            }
+            catch (DbException ex)
+            {
+                if (ex.Message.Contains("duplicate key value violates unique constraint \"email_unico\""))
+                {
+                    return false;
+                }
+                throw;
+            }
         }
 
         public async Task<User> GetUser(User usuario)
