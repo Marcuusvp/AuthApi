@@ -97,6 +97,16 @@ namespace AuthApi.Aplicacao.Services
 
         public async Task<bool> MudarSenha(MudarSenhaUsuarioDto usuario)
         {
+            Console.WriteLine("DEBUG: Informações do objeto usuario:");
+            Console.WriteLine($"Email: {usuario.Email}");
+            Console.WriteLine($"Password: {usuario.Password}");
+            Console.WriteLine($"NewPassword: {usuario.NewPassword}");
+            Console.WriteLine($"ReNewPassword: {usuario.ReNewPassword}");
+            if (usuario.NewPassword != usuario.ReNewPassword)
+            {
+                _mensagem.AdicionaErro("Senha e confirmação não são as mesmas.");
+                return false;
+            }
             var user = _mapper.Map<User>(usuario);
             var usuarioSolicitado = await _authRepository.GetUser(user);
             if (usuarioSolicitado == null)
