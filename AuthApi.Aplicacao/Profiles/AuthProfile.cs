@@ -13,6 +13,7 @@ namespace AuthApi.Aplicacao.Profiles
         public AuthProfile()
         {
             CreateMap<NovoUsuarioDto, User>();
+            CreateMap<UsuarioDto, User>().ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.Password));
         }
         
     }
