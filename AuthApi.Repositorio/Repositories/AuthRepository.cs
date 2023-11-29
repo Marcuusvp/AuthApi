@@ -54,7 +54,7 @@ namespace AuthApi.Repositorio.Repositories
             using IDbConnection sql = _conexao.Conectar;
             var param = new DynamicParameters();
             param.Add("@EMAIL", user.Email, DbType.String);
-            var query = @"SELECT p.permissao, p.id FROM USUARIOS u 
+            var query = @"SELECT p.permissao as Name, p.id as Code FROM USUARIOS u 
                             JOIN USUARIOPERMISSAO up 
                             ON u.id = up.userid
                             JOIN PERMISSOES p 

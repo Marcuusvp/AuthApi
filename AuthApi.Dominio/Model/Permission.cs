@@ -8,6 +8,6 @@ namespace AuthApi.Dominio.Model
     public class Permission
     {
         public string Name { get; set; }
-        public string Code { get; set; }
+        public int Code { get; set; }
     }
 }
